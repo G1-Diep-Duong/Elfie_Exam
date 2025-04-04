@@ -1,0 +1,58 @@
+{
+    "workbench.colorCustomizations": {
+      "terminal.background": "#231F20",
+      "terminal.foreground": "#ffffff",
+      "terminalCursor.background": "#D9D8D8",
+      "terminalCursor.foreground": "#D9D8D8",
+      "terminal.ansiBrightBlack": "#737171",
+      "terminal.ansiBrightBlue": "#009DFF",
+      "terminal.ansiBrightCyan": "#00ffff",
+      "terminal.ansiBrightGreen": "#00FF00",
+      "terminal.ansiBrightMagenta": "#ff00ff",
+      "terminal.ansiBrightRed": "#ff140c",
+      "terminal.ansiBrightWhite": "#FFFFFF",
+      "terminal.ansiBrightYellow": "#FFD204",
+      "terminal.ansiBlack": "#231F20",
+      "terminal.ansiBlue": "#009DFF",
+      "terminal.ansiCyan": "#00ffff",
+      "terminal.ansiGreen": "#00FF00",
+      "terminal.ansiMagenta": "#ff00ff",
+      "terminal.ansiRed": "#ff140c",
+      "terminal.ansiWhite": "#FFFFFF",
+      "terminal.ansiYellow": "#FFD204"
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "files.associations": {
+      "*.spec": "gauge",
+      "*.cpt": "gauge"
+    },
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    "terminal.integrated.scrollback": 100000,
+    "sourcery.token": "user_ujgIt68dnl8QR_a_OcIC0R1sL02j4JbGbI2G3TE1cUY7tWrW8od2_QTQ2fA",
+    "gauge.recommendedSettings.options": "Apply & Reload",
+    "prettier.printWidth": 800,
+    "vscode-pets.petColor": "white",
+    "vscode-pets.petSize": "nano",
+    "vscode-pets.position": "explorer",
+    "vscode-pets.theme": "forest",
+    "vscode-pets.throwBallWithMouse": false,
+    "cSpell.words": [
+      "ATRP",
+      "GHRP"
+    ],
+    "workbench.editor.enablePreview": false,
+    "python.analysis.typeCheckingMode": "off",
+    "black-formatter.args": [
+      "--line-length=9999"
+    ],
+    "terminal.integrated.fontSize": 12,
+    "[log][Log]": {
+      "editor.fontSize": 15, // whatever value you want
+    },
+    "output.smartScroll.enabled": true,
+    "files.exclude": {
+        "**/__pycache__": true
+    }
+  }

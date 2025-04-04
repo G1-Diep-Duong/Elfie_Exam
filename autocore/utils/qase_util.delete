@@ -1,0 +1,77 @@
+# import json
+# from datetime import datetime
+
+# from getgauge.python import data_store
+
+# from . import logger
+# from .API_request import APIRequest
+
+# api = APIRequest()
+# TOKEN = '87532eee2e23a176b9cae851e153984d8155ec8975e4c7c9137e798023616aba'
+
+
+# # https://developers.qase.io/reference/
+# class QASEUtil:
+
+#     _token: str
+
+#     def __init__(self, token=None):
+#         self._token = TOKEN if token is None else token
+
+#     def create_a_new_test_case(self, project_code, title, description='', suite_id=0):
+#         url = f"https://api.qase.io/v1/case/{project_code}"
+#         payload = json.dumps({
+#             "description": str(description),
+#             "title": str(title),
+#             "suite_id": suite_id
+#         })
+#         headers = {
+#             "accept": "application/json",
+#             "content-type": "application/json",
+#             "Token": self._token
+#         }
+#         return api.post(url=url, payload=payload, headers=headers)
+
+#     def create_a_new_test_suite(self, project_code, title):
+#         url = f"https://api.qase.io/v1/suite/{project_code}"
+#         payload = json.dumps({"title": str(title)})
+#         headers = {
+#             "accept": "application/json",
+#             "content-type": "application/json",
+#             "Token": self._token
+#         }
+#         return api.post(url=url, payload=payload, headers=headers)
+
+#     def get_all_test_suites(self, project_code):
+#         url = f"https://api.qase.io/v1/suite/{project_code}"
+#         headers = {
+#             "accept": "application/json",
+#             "content-type": "application/json",
+#             "Token": self._token
+#         }
+#         return api.get(url=url, headers=headers)
+
+#     def search_test_suites(self, project_code, keyword):
+#         url = f"https://api.qase.io/v1/suite/{project_code}?search={keyword}&limit=100&offset=0"
+#         headers = {
+#             "accept": "application/json",
+#             "content-type": "application/json",
+#             "Token": self._token
+#         }
+#         return api.get(url=url, headers=headers)
+
+#     # ==========================================================================================
+
+#     def create_a_new_test_case_within_today_suite(self, project_code, title, description=''):
+#         suite_title = datetime.now().strftime("%d %B %Y")
+#         suite_id = 0
+#         search_suite = self.search_test_suites(project_code=project_code, keyword=suite_title)
+#         if search_suite.status_code == 200:
+#             suite_count = len(search_suite.json.get("result").get("entities"))
+#             if suite_count == 0:
+#                 suite_id = self.create_a_new_test_suite(project_code=project_code, title=suite_title)
+#                 if suite_id.status_code == 200:
+#                     suite_id = suite_id.json.get("result").get("id")
+#             elif suite_count == 1:
+#                 suite_id = search_suite.json.get("result").get("entities")[0].get("id")
+#         self.create_a_new_test_case(project_code=project_code, title=title, description=description, suite_id=suite_id)
