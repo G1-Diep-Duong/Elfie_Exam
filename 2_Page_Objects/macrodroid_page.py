@@ -12,7 +12,8 @@ class MacrodroidPage(MobileScreen):
     def open_application(self):
         self._adb.clear_data("com.arlosoft.macrodroid")
         self._driver.activate_app("com.arlosoft.macrodroid")
-        self._driver.execute_script("mobile: startActivity", {"package": "com.arlosoft.macrodroid", "activity": ".homescreen.NewHomeScreenActivity"})
-        if self.is_element_displayed(BUTTON_SKIP, 2):
+        if self.is_element_displayed(BUTTON_SKIP, 3):
             self.click(BUTTON_SKIP)
             self.click(BUTTON_NAVIGATE_UP)
+        # self._driver.execute_script("mobile: startActivity", {"package": "com.arlosoft.macrodroid", "activity": ".homescreen.NewHomeScreenActivity"})
+
